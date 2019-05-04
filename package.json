@@ -20,10 +20,17 @@
   "homepage": "https://github.com/bkwon94/mvp#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "mongoose": "^5.5.5",
-    "nodemon": "^1.19.0"
+    "nodemon": "^1.19.0",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "react-router-hash-link": "^1.2.1",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
