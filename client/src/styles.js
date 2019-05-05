@@ -29,7 +29,9 @@ export const OtherSection = styled.div`
   height: 100vh;
 `;
 
-export const Navbar = styled.a`
+
+/** HOME HEADER PAGE STYLES */
+export const Navbar = styled.ul`
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -39,7 +41,19 @@ export const Navbar = styled.a`
   justify-content: space-around;
   height: 7.5vh;
   list-style: none;
+  z-index: 3;
+  background-color: rgb(21, 97, 173)
 `;
+
+export const NavListItem = styled.a`
+  color: white important!;
+`;
+
+export const RegisterButton = styled.button`
+  background-color: #1dbab4;
+  color: #FFF;
+`;
+
 
 /** HOME HEADER PAGE STYLES */
 export const MainHeader = styled.h1`

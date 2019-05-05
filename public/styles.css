@@ -6,8 +6,10 @@
 }
 
 #home {
-  background-image: url(./images/petsphoto.png);
-  background-size: 1600px;
+  background-image: linear-gradient(to right, rgba(21, 97, 173, 0.85), rgba(28, 119, 172, 0.75)), url(./images/petsphoto.png);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+
 }
