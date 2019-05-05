@@ -88,12 +88,13 @@ export const DogsSection = styled.div`
   font-size: 50px;
 `;
 
-export const DogForm = styled.form`
+export const DogForm = styled.div`
   width: 500px;
   padding: 30px;
   background: #FFF;
-  margin: 50px auto;
+  margin: 0px auto 110px auto;
   box-shadow: 0px 0px 15 px rgba(0, 0, 0, 0.22);
+
   h2 {
     background: rgb(21, 97, 173);
     text-transform: uppercase;
@@ -135,9 +136,20 @@ export const DogHeader = styled.h3`
   font-size: 1.5em;
 `;
 
+export const DogImageContainer = styled.div`
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
+`;
+
 export const DogFormContainer = styled.div`
   grid-column: 3 / 5;
   grid-row: 2 / 4;
+  img {
+    width: 250px;
+    height: 180px;
+    display: flex;
+    margin: 0 auto;
+  }
 `;
 
 export const DogDisplayContainer = styled.div`

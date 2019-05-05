@@ -69,7 +69,10 @@ class DogsForm extends React.Component {
   render() {
     if (!this.state.doneLoading) {
       return (
-        <DogForm>
+        <DogForm
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <h2>What are you looking for?</h2>
           <form method="get" onSubmit={this.handleFormSubmit}>
               <input name="breed" type="text" placeholder="Breed" onChange={this.handleInputChange}/>
