@@ -8,6 +8,7 @@ export const HeadingSection = styled.div`
   grid-template-rows: 1fr 1.5fr 7fr 1fr;
   height: 100vh;
   background-color: #fff;
+  text-align: center;
 `;
 
 export const DogsSection = styled.div`
@@ -45,8 +46,11 @@ export const Navbar = styled.ul`
   background-color: rgb(21, 97, 173)
 `;
 
-export const NavListItem = styled.a`
-  color: white important!;
+export const NavTitle = styled.a`
+  font-size: 30px;
+  font-weight: 700;
+  color: #fc5226;
+  // text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
 `;
 
 export const RegisterButton = styled.button`
@@ -57,15 +61,30 @@ export const RegisterButton = styled.button`
 
 /** HOME HEADER PAGE STYLES */
 export const MainHeader = styled.h1`
-  font-size: 5vw;
+  font-size: 90px;
   grid-column: 2 / 3;
   grid-row: 2 / 4;
+  color: #FFF;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 `;
 
 export const MainDescription = styled.p`
-  font-size: 1.25vw;
+  font-size: 22.5px;
   grid-column: 2 / 3;
   grid-row: 3 / 4;
+  line-height: 40px;
+  color: #FFF;
+`;
+
+export const MainButton = styled.button`
+  background-color: #1dbab4;
+  height: 50px;
+  width: 150px;
+  border-radius: 50px;
+  border: none;
+  color: #FFF;
+  font-size: 16px;
+  margin-top: 3vh;
 `;
 
 // export { HeadingSection, BasketballSection, SoccerSection, Navbar};
