@@ -7,7 +7,7 @@ const Other = () => {
     <OtherSection id="other">
 
         {/* <Fade left> */}
-          <SectionHeader>Other Pets</SectionHeader>
+          <h3>Other Pets</h3>
         {/* </Fade> */}
 
     </OtherSection>

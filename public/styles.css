@@ -9,6 +9,10 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
+label {
+  display: block;
+  font-size: 0.5em;
+}
 
 #home {
   background-image: linear-gradient(to right, rgba(21, 97, 173, 0.85), rgba(28, 119, 172, 0.75)), url(./images/petsphoto.png);

@@ -1,14 +1,19 @@
 import React from 'react';
-import { DogsSection, SectionHeader } from '../styles.js'
-import Fade from 'react-reveal/Fade';
+import { DogsSection, DogHeader, DogFormContainer } from '../styles.js'
+import DogsForm from './DogsForm.jsx';
+
+
 
 const Dogs = () => {
   return (
     <DogsSection id="dogs">
 
-        {/* <Fade left> */}
-          <SectionHeader>Dogs</SectionHeader>
-        {/* </Fade> */}
+        <DogHeader>Dogs</DogHeader>
+        <DogFormContainer>
+          <DogsForm></DogsForm>
+        </DogFormContainer>
+
+
 
     </DogsSection>
   )

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/bkwon94/mvp#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",

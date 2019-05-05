@@ -4,7 +4,7 @@ import { CatsSection, SectionHeader } from '../styles.js'
 const Cats = () => {
   return (
     <CatsSection id="cats">
-      <SectionHeader>Cats</SectionHeader>
+      <h3>Cats</h3>
     </CatsSection>
   )
 };
