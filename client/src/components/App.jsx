@@ -1,10 +1,11 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import Heading from './Heading.jsx';
-import Basketball from './Basketball.jsx';
-import Soccer from './Soccer.jsx';
-import Hockey from './Hockey.jsx';
+import Home from './Home.jsx';
+import Dogs from './Dogs.jsx';
+import Cats from './Cats.jsx';
+import Other from './Other.jsx';
 import AppNavbar from './AppNavbar.jsx';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -15,10 +16,10 @@ class App extends React.Component {
     return (
       <div>
         <AppNavbar></AppNavbar>
-        <Heading></Heading>
-        <Basketball></Basketball>
-        <Soccer></Soccer>
-        <Hockey></Hockey>
+        <Home></Home>
+        <Dogs></Dogs>
+        <Cats></Cats>
+        <Other></Other>
       </div>
 
     )

@@ -1,15 +1,16 @@
 import React from 'react';
 import { Navbar, NavbarSection } from '../styles.js';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const AppNavbar = () => {
   return (
     <div>
       <Navbar>
-        <li><a href="#">Home</a></li>
-        <li><a href="#basketball">Basketball</a></li>
-        <li><a href="#soccer">Soccer</a></li>
-        <li><a href="#hockey">Hockey</a></li>
-        <li><a href="#football">Football</a></li>
+        <li><Link smooth to="#home">Home</Link></li>
+        <li><Link smooth to="#dogs">Dogs</Link></li>
+        <li><Link smooth to="#cats">Cats</Link></li>
+        <li><Link smooth to="#other">Other</Link></li>
+        <li><a href="#">Register</a></li>
       </Navbar>
     </div>
   )

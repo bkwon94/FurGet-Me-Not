@@ -1,22 +1,26 @@
 import styled, { css } from 'styled-components';
 
 export const HeadingSection = styled.div`
-  background-color: black;
+  height: 100vh;
+  background-color: #fff;
+`;
+
+export const DogsSection = styled.div`
+  background-color: #f9f9f7;
   height: 100vh;
 `;
 
-export const BasketballSection = styled.div`
-  background-color: white;
+export const SectionHeader = styled.h3`
+  font-size: 1.5em;
+`;
+
+export const CatsSection = styled.div`
+  background-color: #fff;
   height: 100vh;
 `;
 
-export const HockeySection = styled.div`
-  background-color: blue;
-  height: 100vh;
-`;
-
-export const SoccerSection = styled.div`
-  background-color: black;
+export const OtherSection = styled.div`
+  background-color: #f9f9f7;
   height: 100vh;
 `;
 
