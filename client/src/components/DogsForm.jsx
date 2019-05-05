@@ -2,7 +2,7 @@ import React from 'react';
 import { TOKEN } from '../../../config.js';
 import DogsDisplay from './DogsDisplay.jsx';
 import Dogs from './Dogs.jsx';
-import { DogDisplayContainer } from '../styles.js';
+import { DogDisplayContainer, DogForm } from '../styles.js';
 
 class DogsForm extends React.Component {
   constructor(props) {
@@ -69,23 +69,16 @@ class DogsForm extends React.Component {
   render() {
     if (!this.state.doneLoading) {
       return (
-        <div>
+        <DogForm>
+          <h2>What are you looking for?</h2>
           <form method="get" onSubmit={this.handleFormSubmit}>
-            <label>Breed:
-              <input name="breed" type="text" onChange={this.handleInputChange}/>
-            </label>
-            <label>Size:
-              <input name="size" type="text" onChange={this.handleInputChange}/>
-            </label>
-            <label>Gender:
-              <input name="gender" type="text" onChange={this.handleInputChange}/>
-            </label>
-            <label>Your Location:
-              <input name="location" type="text" onChange={this.handleInputChange}/>
-            </label>
+              <input name="breed" type="text" placeholder="Breed" onChange={this.handleInputChange}/>
+              <input name="size" type="text" placeholder="Size" onChange={this.handleInputChange}/>
+              <input name="gender" type="text" placeholder="Gender" onChange={this.handleInputChange}/>
+              <input name="location" type="text" placeholder="Location" onChange={this.handleInputChange}/>
             <button>Find Doggos!</button>
           </form>
-        </div>
+        </DogForm>
       )
     } else if (this.state.doneLoading && this.state.dogsData) {
       return (

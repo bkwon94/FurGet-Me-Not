@@ -88,6 +88,46 @@ export const DogsSection = styled.div`
   font-size: 50px;
 `;
 
+export const DogForm = styled.form`
+  width: 500px;
+  padding: 30px;
+  background: #FFF;
+  margin: 50px auto;
+  box-shadow: 0px 0px 15 px rgba(0, 0, 0, 0.22);
+  h2 {
+    background: rgb(21, 97, 173);
+    text-transform: uppercase;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 white, 0 -0.5px black;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    margin: -30px -30px 30px -30px;
+  }
+  input {
+    outline: none;
+    display: block;
+    width: 100%;
+    padding 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    height: 45px;
+    font-size 18px;
+  }
+  button {
+    box-shadow: inset 0px 1px 0px 0px #fc5226;
+    background-color: #fc5226;
+    color: #FFF;
+    border 1px solid #FFF;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+`;
+
 export const DogHeader = styled.h3`
   grid-column: 2 / 3;
   grid-row: 2 / 4;
@@ -103,8 +143,12 @@ export const DogFormContainer = styled.div`
 export const DogDisplayContainer = styled.div`
   height: 80vh;
   overflow: scroll;
-  max-width: 100%
+  max-width: 90%
   overflow-x: hidden;
+  border: 2px solid rgb(21, 97, 173);
+  border-radius: 50px;
+  background-color: rgb(21, 97, 173);
+  color: white;
 `;
 
 export const DogInfoContainer = styled.div`
