@@ -109,11 +109,14 @@ export const DogDisplayContainer = styled.div`
 
 export const DogInfoContainer = styled.div`
   display: flex;
+  justify-content: space-around;
+  align-content: space-between;
+  margin-bottom: 20px;
 `;
 
 export const DogNameAndInfo = styled.div`
   flex-direction: column;
-  max-width: 60%;
+  max-width: 45%;
 `;
 
 export const DogImage = styled.img`
@@ -123,14 +126,19 @@ export const DogImage = styled.img`
 
 export const DogName = styled.h3`
   font-size: 25px;
+  text-align: right;
 `;
 
 export const DogDescription = styled.p`
   font-size: 16px;
+  text-align: right;
 `;
 
-export const DogURL = styled.a`
+export const DogButton = styled.a`
   font-size: 16px;
+  appearance: button;
+  text-decoration: none;
+  float: right;
 `;
 
 // export { HeadingSection, BasketballSection, SoccerSection, Navbar};
