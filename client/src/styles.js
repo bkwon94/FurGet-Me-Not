@@ -80,7 +80,7 @@ export const MainButton = styled.button`
 /** DOG SECTION STYLES */
 export const DogsSection = styled.div`
   display: grid;
-  grid-template-columns: 1fr 8fr 8fr 1fr;
+  grid-template-columns: 1fr 8fr 4fr 4fr 1fr;
   grid-template-rows: 1fr 1fr 8fr;
   background-color: #f9f9f7;
   height: 100vh;
@@ -98,6 +98,39 @@ export const DogHeader = styled.h3`
 export const DogFormContainer = styled.div`
   grid-column: 3 / 5;
   grid-row: 2 / 4;
+`;
+
+export const DogDisplayContainer = styled.div`
+  height: 80vh;
+  overflow: scroll;
+  max-width: 100%
+  overflow-x: hidden;
+`;
+
+export const DogInfoContainer = styled.div`
+  display: flex;
+`;
+
+export const DogNameAndInfo = styled.div`
+  flex-direction: column;
+  max-width: 60%;
+`;
+
+export const DogImage = styled.img`
+  width: 200px;
+  height: 275px;
+`;
+
+export const DogName = styled.h3`
+  font-size: 25px;
+`;
+
+export const DogDescription = styled.p`
+  font-size: 16px;
+`;
+
+export const DogURL = styled.a`
+  font-size: 16px;
 `;
 
 // export { HeadingSection, BasketballSection, SoccerSection, Navbar};

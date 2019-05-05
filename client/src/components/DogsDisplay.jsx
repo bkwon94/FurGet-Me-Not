@@ -1,15 +1,21 @@
 import React from 'react';
+import {  DogImage, DogName, DogInfoContainer, DogDescription, DogURL, DogNameAndInfo } from '../styles.js';
 
-const DogsDisplay = (props) => {
+const DogsDisplay = ({
+  dog: {
+    photos, name, description, url
+  }
+}) => {
+
   return (
-    <div>
-      <img src={props.dog.photos[0].medium}/>
-      <p>{props.dog.name}</p>
-      <p>{props.dog.description}</p>
-      <p>{props.dog.description}</p>
-      <p>{props.dog.url}</p>
-      <p>{props.dog.url}</p>
-    </div>
+    <DogInfoContainer>
+      <DogNameAndInfo>
+        <DogName>{name}</DogName>
+        <DogDescription>{description}</DogDescription>
+        <DogURL href={url}>Adopt Me!</DogURL>
+      </DogNameAndInfo>
+      <DogImage src={photos[0].medium}/>
+    </DogInfoContainer>
   );
 };
 

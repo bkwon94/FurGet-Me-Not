@@ -2,6 +2,7 @@ import React from 'react';
 import { TOKEN } from '../../../config.js';
 import DogsDisplay from './DogsDisplay.jsx';
 import Dogs from './Dogs.jsx';
+import { DogDisplayContainer } from '../styles.js';
 
 class DogsForm extends React.Component {
   constructor(props) {
@@ -88,7 +89,7 @@ class DogsForm extends React.Component {
       )
     } else if (this.state.doneLoading && this.state.dogsData) {
       return (
-        <div>
+        <DogDisplayContainer>
 
             {
               this.state.dogsData.animals.map((dog, index) => {
@@ -96,7 +97,7 @@ class DogsForm extends React.Component {
               })
             }
 
-        </div>
+        </DogDisplayContainer>
       )
     }
 
