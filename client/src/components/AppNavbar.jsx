@@ -3,6 +3,7 @@ import { Navbar, NavbarSection, RegisterButton, NavTitle} from '../styles.js';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 
+
 const AppNavbar = () => {
   return (
     <div>
