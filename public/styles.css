@@ -6,8 +6,8 @@
 }
 
 #home {
-  
-  background-size: 725px;
+  background-image: url(./images/petsphoto.png);
+  background-size: 1600px;
   background-repeat: no-repeat;
   background-position: center;
 }

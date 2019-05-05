@@ -1,6 +1,11 @@
 import styled, { css } from 'styled-components';
 
+/** SECTION STYLES */
+
 export const HeadingSection = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 1.5fr 7fr 1fr;
   height: 100vh;
   background-color: #fff;
 `;
@@ -36,5 +41,17 @@ export const Navbar = styled.a`
   list-style: none;
 `;
 
+/** HOME HEADER PAGE STYLES */
+export const MainHeader = styled.h1`
+  font-size: 5vw;
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
+`;
+
+export const MainDescription = styled.p`
+  font-size: 1.25vw;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+`;
 
 // export { HeadingSection, BasketballSection, SoccerSection, Navbar};
