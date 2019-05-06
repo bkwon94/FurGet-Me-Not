@@ -7,9 +7,20 @@ const UserSchema = new Schema({
   firstName: String,
   lastName: String,
   favorites: {
-    sports: String,
-    team: String,
-    player: String
+    dogs: {
+      info: {
+        name: String,
+        breed: String,
+        url: String
+      }
+    },
+    cats: {
+      info: {
+        name: String,
+        breed: String,
+        url: String
+      }
+    }
   }
 });
 

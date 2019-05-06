@@ -1,12 +1,19 @@
 import React from 'react';
 import { useState } from 'react';
-import { HeadingSection, MainHeader, MainDescription, MainButton } from '../styles.js';
+import { HeadingSection, MainHeader, MainDescription, MainButton, Form } from '../styles.js';
+import { useInput } from '../hooks/input-hook.jsx';
 import Popup from 'reactjs-popup';
 
 const Home = () => {
 
 const [open, openModal] = useState(false);
+const [username, setValue] = useState('');
+const [password, setValue] = useState('');
+const [firstName, setValue] = useState('');
+const [lastName, setValue] = useState('');
 
+// need to handle form input change
+const onChange = event => setValue(event.target.value);
 
   return (
     <HeadingSection id="home">
@@ -22,14 +29,17 @@ const [open, openModal] = useState(false);
         closeOnDocumentClick
         onClose={() => openModal(false)}
       >
-        <form>
-          <input type="text"/>
-          <input type="text"/>
-          <input type="text"/>
-          <input type="text"/>
-        </form>
+        <Form>
+          <h2>Create An Account</h2>
+          <form>
+            <input value={username} type="text" placeholder="Username" onChange={onChange}/>
+            <input value={password} type="text" placeholder="Password" onChange={onChange}/>
+            <input value={firstName} type="text" placeholder="First Name" onChange={onChange}/>
+            <input value={lastName} type="text" placeholder="Last Name" onChange={onChange}/>
+            <button>Register</button>
+          </form>
+        </Form>
       </Popup>
-
 
       </MainDescription>
 

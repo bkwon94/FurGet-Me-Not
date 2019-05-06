@@ -12,6 +12,15 @@ class App extends React.Component {
     super(props);
     this.state = {};
   }
+  // create new account for user
+  createNewUser() {
+    fetch('/users', {
+      method: 'POST',
+      body: {
+        
+      }
+    })
+  }
   render() {
     return (
       <div>

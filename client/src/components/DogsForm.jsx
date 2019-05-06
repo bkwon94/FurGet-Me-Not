@@ -2,7 +2,7 @@ import React from 'react';
 import { TOKEN } from '../../../config.js';
 import DogsDisplay from './DogsDisplay.jsx';
 import Dogs from './Dogs.jsx';
-import { DogDisplayContainer, DogForm } from '../styles.js';
+import { DogDisplayContainer, Form } from '../styles.js';
 
 class DogsForm extends React.Component {
   constructor(props) {
@@ -75,7 +75,7 @@ class DogsForm extends React.Component {
             data-aos-delay="1900"
             data-aos-duration="300"
           />
-          <DogForm
+          <Form
           data-aos="fade-up"
           data-aos-duration="2000"
           >
@@ -87,7 +87,7 @@ class DogsForm extends React.Component {
               <input name="location" type="text" placeholder="Location" onChange={this.handleInputChange}/>
             <button>Find Doggos!</button>
             </form>
-          </DogForm>
+          </Form>
         </div>
 
       )

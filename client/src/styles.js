@@ -32,7 +32,7 @@ export const NavTitle = styled.li`
   align-self: flex-start;
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 12px;
+  margin-left: 25px;
   font-size: 35px;
   font-weight: 700;
   color: #fc5226;
@@ -43,14 +43,31 @@ export const NavItems = styled.li`
   align-self: flex-end;
   justify-content: flex-end;
   font-size: 20px;
+  margin-right: 15px;
+  border-bottom: 3px solid transparent;
+  padding-bottom: 4px;
+  :hover {
+    border-bottom: 3px solid #fff;
+    transition: 0.5s;
+  }
 `;
 
 export const NavItemsContainer = styled.div`
-justify-content: space-between;
-display: flex;
-width: 18%;
-margin-left: auto;
-margin-right: 20px;
+  justify-content: space-between;
+  display: flex;
+  width: 18%;
+  margin-left: auto;
+  margin-right: 25px;
+`;
+
+export const Favorites = styled.button`
+   color: white;
+   background-color: transparent;
+   border: none;
+   font-size: 20px;
+   :hover {
+     color: red;
+   }
 `;
 
 export const RegisterButton = styled.button`
@@ -108,7 +125,7 @@ export const DogsSection = styled.div`
   font-size: 50px;
 `;
 
-export const DogForm = styled.div`
+export const Form = styled.div`
   width: 500px;
   padding: 30px;
   background: #FFF;
