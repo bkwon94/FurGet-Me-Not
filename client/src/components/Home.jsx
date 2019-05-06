@@ -7,13 +7,20 @@ import Popup from 'reactjs-popup';
 const Home = () => {
 
 const [open, openModal] = useState(false);
-const [username, setValue] = useState('');
-const [password, setValue] = useState('');
-const [firstName, setValue] = useState('');
-const [lastName, setValue] = useState('');
+const { value: username, bind: bindUsername, reset: resetUsername } = useInput('');
+const { value: password, bind: bindPassword, reset: resetPassword } = useInput('');
+const { value: firstName, bind: bindFirstName, reset: resetFirstName } = useInput('');
+const { value: lastName, bind: bindLastName, reset: resetLastName } = useInput('');
 
 // need to handle form input change
-const onChange = event => setValue(event.target.value);
+const handleSubmit = event => {
+  event.preventDefault();
+  console.log(`Submitting ${username}, ${password}, ${firstName}, ${lastName}`);
+  resetUsername();
+  resetPassword();
+  resetFirstName();
+  resetLastName();
+}
 
   return (
     <HeadingSection id="home">
@@ -31,11 +38,11 @@ const onChange = event => setValue(event.target.value);
       >
         <Form>
           <h2>Create An Account</h2>
-          <form>
-            <input value={username} type="text" placeholder="Username" onChange={onChange}/>
-            <input value={password} type="text" placeholder="Password" onChange={onChange}/>
-            <input value={firstName} type="text" placeholder="First Name" onChange={onChange}/>
-            <input value={lastName} type="text" placeholder="Last Name" onChange={onChange}/>
+          <form onSubmit={handleSubmit}>
+            <input type="text" placeholder="Username" {...bindUsername}/>
+            <input type="text" placeholder="Password" {...bindPassword}/>
+            <input type="text" placeholder="First Name" {...bindFirstName}/>
+            <input type="text" placeholder="Last Name" {...bindLastName}/>
             <button>Register</button>
           </form>
         </Form>
