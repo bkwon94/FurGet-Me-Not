@@ -6,21 +6,40 @@ import Popup from 'reactjs-popup';
 
 const Home = () => {
 
-const [open, openModal] = useState(false);
-const { value: username, bind: bindUsername, reset: resetUsername } = useInput('');
-const { value: password, bind: bindPassword, reset: resetPassword } = useInput('');
-const { value: firstName, bind: bindFirstName, reset: resetFirstName } = useInput('');
-const { value: lastName, bind: bindLastName, reset: resetLastName } = useInput('');
+  const [open, openModal] = useState(false);
+  const { value: username, bind: bindUsername, reset: resetUsername } = useInput('');
+  const { value: password, bind: bindPassword, reset: resetPassword } = useInput('');
+  const { value: firstName, bind: bindFirstName, reset: resetFirstName } = useInput('');
+  const { value: lastName, bind: bindLastName, reset: resetLastName } = useInput('');
 
-// need to handle form input change
-const handleSubmit = event => {
-  event.preventDefault();
-  console.log(`Submitting ${username}, ${password}, ${firstName}, ${lastName}`);
-  resetUsername();
-  resetPassword();
-  resetFirstName();
-  resetLastName();
-}
+  // need to handle form input change
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log(`Submitting ${username}, ${password}, ${firstName}, ${lastName}`);
+
+    fetch('/users', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        username: username,
+        password: password,
+        firstName: firstName,
+        lastName: lastName
+      })
+    })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        throw err;
+      })
+      .then(() => {
+        resetUsername();
+        resetPassword();
+        resetFirstName();
+        resetLastName();
+      })
+  }
 
   return (
     <HeadingSection id="home">
