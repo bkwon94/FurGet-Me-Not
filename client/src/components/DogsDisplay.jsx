@@ -7,6 +7,7 @@ const DogsDisplay = ({
   }
 }) => {
   if (!description || description.length < 30) { return null; }
+  if (!photos.length) { return null; }
   return (
     <DogInfoContainer>
       <DogNameAndInfo>
@@ -15,7 +16,7 @@ const DogsDisplay = ({
         <DogButton href={url}>Adopt Me! <i className="fas fa-home"></i></DogButton>
 
       </DogNameAndInfo>
-      <DogImage src={photos[0].medium}/>
+      <DogImage src={photos[0].medium || photos[0].small}/>
     </DogInfoContainer>
   );
 };

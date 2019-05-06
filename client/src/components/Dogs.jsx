@@ -9,7 +9,7 @@ const Dogs = () => {
     <DogsSection id="dogs">
 
         {/* <DogHeader>Dogs</DogHeader> */}
-        <DogThinkingBubble>Bark! Bark! Welcome to <em>Fur Get Me Not</em> Hoomans. Please fill out the form on the right to get started so we can find our FUREVER homes!<p>- Furry Friends</p></DogThinkingBubble>
+        <DogThinkingBubble>Bark! Bark! Welcome to <em>Fur Get Me Not</em> Hoomans. Please fill out the form on the right to get started so we can find our FUREVER homes!<p>- Furry Friends <i className="fas fa-dog"></i></p></DogThinkingBubble>
         <DogImageContainer>
           <img src="./images/dog-group.png"
             data-aos="fade-right"

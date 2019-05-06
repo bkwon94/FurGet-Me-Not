@@ -19,19 +19,38 @@ export const Navbar = styled.ul`
   top: 0;
   left: 0;
   right: 0;
-  justify-content: space-around;
+  // justify-content: space-between;
   align-items: center;
-  height: 6.5vh;
+  height: 7vh;
   list-style: none;
   z-index: 1;
-  background-color: rgb(21, 97, 173)
+  background-color: rgb(21, 97, 173);
+  padding: 0;
 `;
 
 export const NavTitle = styled.li`
-  font-size: 30px;
+  align-self: flex-start;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 12px;
+  font-size: 35px;
   font-weight: 700;
   color: #fc5226;
   // text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
+`;
+
+export const NavItems = styled.li`
+  align-self: flex-end;
+  justify-content: flex-end;
+  font-size: 20px;
+`;
+
+export const NavItemsContainer = styled.div`
+justify-content: space-between;
+display: flex;
+width: 18%;
+margin-left: auto;
+margin-right: 20px;
 `;
 
 export const RegisterButton = styled.button`
@@ -68,7 +87,7 @@ export const MainDescription = styled.div`
 `;
 
 export const MainButton = styled.button`
-  background-color: #1dbab4;
+  background-color: #fc5226;
   height: 50px;
   width: 150px;
   border-radius: 50px;
