@@ -1,18 +1,19 @@
 import React from 'react';
-import {  DogImage, DogName, DogInfoContainer, DogDescription, DogButton, DogNameAndInfo } from '../styles.js';
+import {  DogImage, DogName, DogInfoContainer, DogDescription, DogButton, DogNameAndInfo, DogButtonContainer } from '../styles.js';
 
 const DogsDisplay = ({
   dog: {
     photos, name, description, url
   }
 }) => {
-
+  if (!description || description.length < 30) { return null; }
   return (
     <DogInfoContainer>
       <DogNameAndInfo>
         <DogName>{name}</DogName>
         <DogDescription>{description}</DogDescription>
-        <DogButton href={url}>Adopt Me!</DogButton>
+        <DogButton href={url}>Adopt Me! <i className="fas fa-home"></i></DogButton>
+
       </DogNameAndInfo>
       <DogImage src={photos[0].medium}/>
     </DogInfoContainer>

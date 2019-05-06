@@ -20,6 +20,7 @@ export const Navbar = styled.ul`
   left: 0;
   right: 0;
   justify-content: space-around;
+  align-items: center;
   height: 6.5vh;
   list-style: none;
   z-index: 1;
@@ -81,7 +82,7 @@ export const MainButton = styled.button`
 export const DogsSection = styled.div`
   display: grid;
   grid-template-columns: 1fr 8fr 4fr 4fr 1fr;
-  grid-template-rows: 1fr 1fr 8fr;
+  grid-template-rows: 1fr 3fr 6fr;
   background-color: #f9f9f7;
   height: 100vh;
   // text-align: center;
@@ -136,9 +137,41 @@ export const DogHeader = styled.h3`
   font-size: 1.5em;
 `;
 
+export const DogThinkingBubble = styled.div`
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
+  position: relative;
+  background: rgb(21, 97, 173);
+  border-radius: 0.4em;
+  font-size: 18px;
+  color: #FFF;
+  width: 300px;
+  height: 200px;
+  margin: 50px auto 0 auto;
+  padding: 25px 20px 0 20px;
+  :after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 14px solid transparent;
+    border-top-color: rgb(21, 97, 173);
+    border-bottom: 0;
+    margin-left: -14px;
+    margin-bottom: -14px;
+  }
+  p {
+    float: right;
+    margin-top: 15px;
+  }
+`;
+
 export const DogImageContainer = styled.div`
   grid-column: 2 / 3;
   grid-row: 3 / 5;
+  margin: 0 auto auto auto;
 `;
 
 export const DogFormContainer = styled.div`
@@ -157,32 +190,47 @@ export const DogDisplayContainer = styled.div`
   overflow: scroll;
   max-width: 90%
   overflow-x: hidden;
-  border: 2px solid rgb(21, 97, 173);
-  border-radius: 50px;
-  background-color: rgb(21, 97, 173);
-  color: white;
+  border: 2px solid #FFF;
+  // border-radius: 50px;
+  background-color: #FFF;
+  color: #797979;
+  h2 {
+    background: rgb(21, 97, 173);
+    text-transform: uppercase;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 white, 0 -0.5px black;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    padding: 30px 30px 15px 30px;
+    margin: -20px -20px 20px -20px;
+  }
 `;
 
 export const DogInfoContainer = styled.div`
   display: flex;
-  justify-content: space-around;
-  align-content: space-between;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  // align-content: space-between;
+  margin-bottom: 30px;
 `;
 
 export const DogNameAndInfo = styled.div`
   flex-direction: column;
+  justify-content: space-between;
   max-width: 45%;
 `;
 
 export const DogImage = styled.img`
   width: 200px;
   height: 275px;
+  background: transparent;
+  padding: 4px;
+  border: 1px solid #797979;
 `;
 
 export const DogName = styled.h3`
   font-size: 25px;
   text-align: right;
+  color: rgb(21, 97, 173)
 `;
 
 export const DogDescription = styled.p`
@@ -191,10 +239,18 @@ export const DogDescription = styled.p`
 `;
 
 export const DogButton = styled.a`
-  font-size: 16px;
-  appearance: button;
+  font-size: 13px;
   text-decoration: none;
   float: right;
+  color: #FFF;
+  background-color: #fc5226;
+  width: 95px;
+  height: 30px;
+  padding: 7px 1.5px 0 7px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 4px;
 `;
+
 
 // export { HeadingSection, BasketballSection, SoccerSection, Navbar};

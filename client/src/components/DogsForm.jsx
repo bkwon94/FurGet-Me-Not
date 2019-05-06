@@ -69,24 +69,32 @@ class DogsForm extends React.Component {
   render() {
     if (!this.state.doneLoading) {
       return (
-        <DogForm
+        <div>
+          <img src="./images/dogpeek.png"
+            data-aos="fade-up"
+            data-aos-delay="1900"
+            data-aos-duration="300"
+          />
+          <DogForm
           data-aos="fade-up"
           data-aos-duration="2000"
-        >
-          <h2>What are you looking for?</h2>
-          <form method="get" onSubmit={this.handleFormSubmit}>
+          >
+            <h2>What are you looking for?</h2>
+            <form method="get" onSubmit={this.handleFormSubmit}>
               <input name="breed" type="text" placeholder="Breed" onChange={this.handleInputChange}/>
               <input name="size" type="text" placeholder="Size" onChange={this.handleInputChange}/>
               <input name="gender" type="text" placeholder="Gender" onChange={this.handleInputChange}/>
               <input name="location" type="text" placeholder="Location" onChange={this.handleInputChange}/>
             <button>Find Doggos!</button>
-          </form>
-        </DogForm>
+            </form>
+          </DogForm>
+        </div>
+
       )
     } else if (this.state.doneLoading && this.state.dogsData) {
       return (
         <DogDisplayContainer>
-
+          <h2>{this.state.breed}'s near you</h2>
             {
               this.state.dogsData.animals.map((dog, index) => {
                 return <DogsDisplay key={index} dog={dog}/>

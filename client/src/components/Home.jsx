@@ -12,7 +12,7 @@ const [open, openModal] = useState(false);
     <HeadingSection id="home">
       <MainHeader>Fur Get Me Not</MainHeader>
 
-      <MainDescription><p>Looking for a new dog? Cat? Or maybe... rabbit?</p> <em>Fur Get Me Not</em> is the premier place to find your next fur buddy! <p>Simply lookup what furry friend your heart desires</p> <p>And a list of local adoption locations will be available!</p>
+      <MainDescription><p>Looking for a new dog? Cat? Or maybe... rabbit?</p> <em>Fur Get Me Not</em> is the premier place to find your next furry friend! <p>Simply lookup what your heart desires..</p> <p>And a list of local adoptions will be available!</p>
 
 
       <MainButton onClick={() => openModal(true)}>Get Started!  <i className="fas fa-paw"></i></MainButton>

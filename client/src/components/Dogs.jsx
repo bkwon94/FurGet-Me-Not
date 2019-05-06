@@ -1,5 +1,5 @@
 import React from 'react';
-import { DogsSection, DogHeader, DogFormContainer, DogImageContainer } from '../styles.js'
+import { DogsSection, DogHeader, DogFormContainer, DogImageContainer, DogThinkingBubble } from '../styles.js'
 import DogsForm from './DogsForm.jsx';
 
 
@@ -8,7 +8,8 @@ const Dogs = () => {
   return (
     <DogsSection id="dogs">
 
-        <DogHeader>Dogs</DogHeader>
+        {/* <DogHeader>Dogs</DogHeader> */}
+        <DogThinkingBubble>Bark! Bark! Welcome to <em>Fur Get Me Not</em> Hoomans. Please fill out the form on the right to get started so we can find our FUREVER homes!<p>- Furry Friends</p></DogThinkingBubble>
         <DogImageContainer>
           <img src="./images/dog-group.png"
             data-aos="fade-right"
@@ -18,11 +19,6 @@ const Dogs = () => {
         </DogImageContainer>
 
         <DogFormContainer>
-          <img src="./images/dogpeek.png"
-            data-aos="fade-up"
-            data-aos-delay="1900"
-            data-aos-duration="300"
-          />
           <DogsForm></DogsForm>
         </DogFormContainer>
 
