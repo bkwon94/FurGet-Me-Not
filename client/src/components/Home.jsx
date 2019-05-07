@@ -59,7 +59,7 @@ const Home = (props) => {
           <h2>Create An Account</h2>
           <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Username" {...bindUsername}/>
-            <input type="text" placeholder="Password" {...bindPassword}/>
+            <input type="password" placeholder="Password" {...bindPassword}/>
             <input type="text" placeholder="First Name" {...bindFirstName}/>
             <input type="text" placeholder="Last Name" {...bindLastName}/>
             <button>Register</button>
@@ -67,7 +67,6 @@ const Home = (props) => {
         </Form>
       </Popup>
       </MainDescription>
-
     </HeadingSection>
   )
 };

@@ -25,3 +25,7 @@ Navigate in browser to
 ```
 http://localhost:7000
 ```
+
+### Demo
+![furget-demo](demo/furgetmenot1.gif)
+![furget-demo2](demo/furgetmenot2.gif)
