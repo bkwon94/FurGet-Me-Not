@@ -12,7 +12,7 @@ const AppNavbar = ({ dogFavs }) => {
   return (
     <div>
       <Navbar>
-        <NavTitle><i className="fas fa-paw"></i><NavLink smooth to="#home" style={{ textDecoration: 'none', color: 'white' }}>  Fur Get Me Not</NavLink></NavTitle>
+        <NavTitle><i className="fas fa-paw"></i><NavLink smooth to="#home" style={{ textDecoration: 'none', color: 'white' }}>  FurGet Me Not</NavLink></NavTitle>
 
         <NavItemsContainer>
           <NavItems><NavLink smooth to="#dogs" style={{ textDecoration: 'none', color: 'white' }}>Dogs</NavLink></NavItems>

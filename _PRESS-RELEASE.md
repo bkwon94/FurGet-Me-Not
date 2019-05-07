@@ -1,4 +1,4 @@
-# Project Name #
+# FurGet Me Not #
 
 <!--
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -16,29 +16,17 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
 
-## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+## Pet Adoption App ##
+  > FurGet Me Not is web application for users who are seeking to adopt a new pet.
 
-## Sub-Heading ##
-  > This product is intended for any sports fanatic that wants easy access to a clean and simple sports page with live scores, states and more.
+## Target Audience ##
+  > This product is intended for any pet lovers who are looking to adopt animals in need of a new home.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > A visitor can register and create an account. Following registration, the user can now look up pets available for adoption based on certain critera the user inputs. An external link is provided to proceed with the adoption process.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > There are so many pets that need new homes but so few people that are willing to take them in.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
-
-## Quote from You ##
-  > A quote from a spokesperson in your company.
-
-## How to Get Started ##
-  > Describe how easy it is to get started.
-
-## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-
-## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > This product allows for easy access to pets in any area. It is essentially a one-stop-shop to find numerous adoption opportunities.

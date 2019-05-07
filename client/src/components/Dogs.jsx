@@ -8,7 +8,7 @@ const Dogs = ({ currentUser, getFavs }) => {
   return (
     <DogsSection id="dogs">
         <DogThinkingBubble data-aos="flip-up" data-aos-delay="800" data-aos-duration="1200">
-          Bark! Bark! Welcome to <em>Fur Get Me Not</em> Hoomans. Please fill out the form on the right to get started so we can find our FUREVER homes!<p>- Furry Friends <i className="fas fa-dog"></i></p>
+          Bark! Bark! Welcome to <em>FurGet Me Not</em> Hoomans. Please fill out the form on the right to get started so we can find our FUREVER homes!<p>- Furry Friends <i className="fas fa-dog"></i></p>
         </DogThinkingBubble>
         <DogImageContainer>
           <img src="./images/dog-group.png"
