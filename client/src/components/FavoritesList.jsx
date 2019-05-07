@@ -28,7 +28,7 @@ const FavoritesList = ({ dogFavs }) => {
       {/* URL */}
       <span><h4>Link:</h4>
         {dogFavs.url.map((url, index) => {
-          return <FavoritesItem key={index} url={url}/>
+          return <FavoritesItem deleteFav={deleteFav} key={index} url={url}/>
         })}
       </span>
 

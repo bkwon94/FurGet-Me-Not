@@ -44,6 +44,7 @@ const updateUser = async (username, breed, name, url) => {
   return 'Successfully updated favorites!'
 };
 
+
 module.exports = {
   insertUser: insertUser,
   updateUser: updateUser,

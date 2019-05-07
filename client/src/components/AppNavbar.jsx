@@ -1,11 +1,11 @@
 import React from 'react';
-import { Navbar, NavbarSection, RegisterButton, NavTitle, NavItems, NavItemsContainer, Favorites} from '../styles.js';
+import { Navbar, NavTitle, NavItems, NavItemsContainer, Favorites} from '../styles.js';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import Popup from 'reactjs-popup';
 import { useState } from 'react';
 import FavoritesList from './FavoritesList.jsx';
 
-const AppNavbar = ({ dogFavs, catFavs }) => {
+const AppNavbar = ({ dogFavs }) => {
 
   const [open, openModal] = useState(false);
 
@@ -22,7 +22,7 @@ const AppNavbar = ({ dogFavs, catFavs }) => {
             <Favorites onClick={() => openModal(true)}><i className="far fa-heart"></i></Favorites>
             <Popup open={open} closeOnDocumentClick onClose={() => openModal(false)}>
               {/* favorties comp */}
-              <FavoritesList dogFavs={dogFavs} catFavs={catFavs}/>
+              <FavoritesList dogFavs={dogFavs}/>
             </Popup>
           </NavItems>
         </NavItemsContainer>

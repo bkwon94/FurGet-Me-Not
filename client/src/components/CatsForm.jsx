@@ -94,7 +94,7 @@ class CatsForm extends React.Component {
     if (!this.state.doneLoading) {
       return (
         <div>
-          <img src="./images/cat-lay.png"
+          <img src="./images/kitten.png"
             data-aos="fade-up"
             data-aos-delay="1900"
             data-aos-duration="300"

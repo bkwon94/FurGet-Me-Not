@@ -1,12 +1,14 @@
 import React from 'react';
 import { FavoritesItems } from '../styles';
 
-const FavoritesItem = ({ name, breed, url}) => {
+const FavoritesItem = ({ name, breed, url }) => {
   return (
     <FavoritesItems>
       <span>{name}</span>
       <span>{breed}</span>
-      {url ? <span><a href={url}>Adopt!</a></span>: null}
+      {
+        url ? <span><a href={url}>Adopt!</a></span>: null
+      }
     </FavoritesItems>
   )
 }

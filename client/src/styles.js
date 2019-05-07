@@ -204,6 +204,43 @@ export const CatButton = styled.a`
   margin-top: 4px;
 `;
 
+export const CatImageContainer = styled.div`
+  grid-column: 4 / 6;
+  grid-row: 3 / 5;
+  margin: 0 auto auto auto;
+`;
+
+export const CatThinkingBubble = styled.div`
+  grid-column: 4 / 6;
+  grid-row: 2 / 4;
+  position: relative;
+  background: rgb(21, 97, 173);
+  border-radius: 0.4em;
+  font-size: 18px;
+  color: #FFF;
+  width: 300px;
+  height: 200px;
+  margin: 50px auto 0 auto;
+  padding: 25px 20px 0 20px;
+  :after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 14px solid transparent;
+    border-top-color: rgb(21, 97, 173);
+    border-bottom: 0;
+    margin-left: -14px;
+    margin-bottom: -14px;
+  }
+  p {
+    float: right;
+    margin-top: 15px;
+  }
+`;
+
 /** DOG SECTION STYLES */
 export const DogsSection = styled.div`
   display: grid;

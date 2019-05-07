@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 import Home from './Home.jsx';
 import Dogs from './Dogs.jsx';
 import Cats from './Cats.jsx';
@@ -45,7 +44,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <AppNavbar dogFavs={this.state.dogFavorites} catFavs={this.state.catFavorites}></AppNavbar>
+        <AppNavbar dogFavs={this.state.dogFavorites}></AppNavbar>
         <Home getCurrent={this.getCurrentUser}></Home>
         <Dogs currentUser={this.state.currentUser} getFavs={this.getUserFavorites}></Dogs>
         <Cats currentUser={this.state.currentUser} getFavs={this.getUserFavorites}></Cats>
