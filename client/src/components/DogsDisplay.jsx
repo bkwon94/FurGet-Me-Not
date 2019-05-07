@@ -1,5 +1,5 @@
 import React from 'react';
-import {  DogImage, DogName, DogInfoContainer, DogDescription, DogButton, DogNameAndInfo, DogButtonContainer } from '../styles.js';
+import {  DogImage, DogName, DogInfoContainer, DogDescription, DogButton, DogNameAndInfo, FavoriteButton } from '../styles.js';
 
 const DogsDisplay = ({
   dog: {
@@ -12,7 +12,11 @@ const DogsDisplay = ({
     <DogInfoContainer>
       <DogNameAndInfo>
         <DogName>{name}</DogName>
-        <DogDescription>{description}</DogDescription>
+        <DogDescription>{description}
+        <div>
+          <FavoriteButton><i className="fas fa-heart"></i></FavoriteButton>
+        </div>
+        </DogDescription>
         <DogButton href={url}>Adopt Me! <i className="fas fa-home"></i></DogButton>
 
       </DogNameAndInfo>

@@ -288,5 +288,11 @@ export const DogButton = styled.a`
   margin-top: 4px;
 `;
 
+export const FavoriteButton = styled.button`
+  border: none;
+  color: red;
+  font-size: 16px;
+`;
+
 
 // export { HeadingSection, BasketballSection, SoccerSection, Navbar};
