@@ -45,10 +45,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <AppNavbar dogFavs={this.state.dogFavorites}></AppNavbar>
+        <AppNavbar dogFavs={this.state.dogFavorites} catFavs={this.state.catFavorites}></AppNavbar>
         <Home getCurrent={this.getCurrentUser}></Home>
         <Dogs currentUser={this.state.currentUser} getFavs={this.getUserFavorites}></Dogs>
-        <Cats currentUser={this.state.currentUser}></Cats>
+        <Cats currentUser={this.state.currentUser} getFavs={this.getUserFavorites}></Cats>
         <Other></Other>
       </div>
 

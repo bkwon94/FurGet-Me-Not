@@ -1,10 +1,13 @@
 import React from 'react';
-import { CatsSection, SectionHeader } from '../styles.js'
+import { CatsSection, CatFormContainer } from '../styles.js'
+import CatsForm from './CatsForm.jsx';
 
 const Cats = () => {
   return (
     <CatsSection id="cats">
-      <h3>Cats</h3>
+      <CatFormContainer>
+        <CatsForm />
+      </CatFormContainer>
     </CatsSection>
   )
 };

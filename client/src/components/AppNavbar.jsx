@@ -5,7 +5,7 @@ import Popup from 'reactjs-popup';
 import { useState } from 'react';
 import FavoritesList from './FavoritesList.jsx';
 
-const AppNavbar = ({ dogFavs }) => {
+const AppNavbar = ({ dogFavs, catFavs }) => {
 
   const [open, openModal] = useState(false);
 
@@ -22,7 +22,7 @@ const AppNavbar = ({ dogFavs }) => {
             <Favorites onClick={() => openModal(true)}><i className="far fa-heart"></i></Favorites>
             <Popup open={open} closeOnDocumentClick onClose={() => openModal(false)}>
               {/* favorties comp */}
-              <FavoritesList dogFavs={dogFavs}/>
+              <FavoritesList dogFavs={dogFavs} catFavs={catFavs}/>
             </Popup>
           </NavItems>
         </NavItemsContainer>

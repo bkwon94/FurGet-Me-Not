@@ -1,10 +1,5 @@
 import styled, { css } from 'styled-components';
 
-export const CatsSection = styled.div`
-  background-color: #fff;
-  height: 100vh;
-`;
-
 export const OtherSection = styled.div`
   background-color: #f9f9f7;
   height: 100vh;
@@ -91,11 +86,12 @@ export const MainHeader = styled.h1`
   margin-top: 2.5vh;
   grid-column: 2 / 3;
   grid-row: 2 / 4;
-  color: #FFF;
+  color: #fff;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 `;
 
 export const MainDescription = styled.div`
+  margin-top: 15px;
   font-size: 22.5px;
   grid-column: 2 / 3;
   grid-row: 3 / 4;
@@ -112,6 +108,100 @@ export const MainButton = styled.button`
   color: #FFF;
   font-size: 16px;
   margin-top: 3vh;
+`;
+
+/** CAT SECTION STYLES */
+export const CatsSection = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 4fr 4fr 8fr 1fr;
+  grid-template-rows: 1fr 3fr 6fr;
+  // background-color: #f9f9f7;
+  height: 100vh;
+  // text-align: center;
+  font-size: 50px;
+  background-color: #fff;
+  height: 100vh;
+`;
+
+export const CatFormContainer = styled.div`
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  img {
+    width: 250px;
+    height: 180px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+  }
+`;
+
+export const CatDisplayContainer = styled.div`
+  height: 80vh;
+  overflow: scroll;
+  max-width: 90%
+  overflow-x: hidden;
+  border: 2px solid #FFF;
+  // border-radius: 50px;
+  background-color: #FFF;
+  color: #797979;
+  h2 {
+    background: rgb(21, 97, 173);
+    text-transform: uppercase;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 white, 0 -0.5px black;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    padding: 30px 30px 15px 30px;
+    margin: -20px -20px 20px -20px;
+  }
+`;
+
+export const CatInfoContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  // align-content: space-between;
+  margin-bottom: 30px;
+  margin-left: 10px;
+`;
+
+export const CatNameAndInfo = styled.div`
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 45%;
+`;
+
+export const CatImage = styled.img`
+  width: 190px;
+  height: 275px;
+  background: transparent;
+  padding: 4px;
+  border: 1px solid #797979;
+`;
+
+export const CatName = styled.h3`
+  font-size: 25px;
+  text-align: right;
+  color: rgb(21, 97, 173)
+`;
+
+export const CatDescription = styled.p`
+  font-size: 16px;
+  text-align: right;
+`;
+
+export const CatButton = styled.a`
+  font-size: 13px;
+  text-decoration: none;
+  float: right;
+  color: #FFF;
+  background-color: #fc5226;
+  width: 95px;
+  height: 30px;
+  padding: 7px 1.5px 0 7px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 4px;
 `;
 
 /** DOG SECTION STYLES */
@@ -164,13 +254,6 @@ export const Form = styled.div`
     text-decoration: none;
     text-transform: uppercase;
   }
-`;
-
-export const DogHeader = styled.h3`
-  grid-column: 2 / 3;
-  grid-row: 2 / 4;
-  margin
-  font-size: 1.5em;
 `;
 
 export const DogThinkingBubble = styled.div`
@@ -239,6 +322,11 @@ export const DogDisplayContainer = styled.div`
     font-size: 35px;
     padding: 30px 30px 15px 30px;
     margin: -20px -20px 20px -20px;
+  }
+  span {
+    display: inline-block;
+    margin-right: 5px;
+    float: left;
   }
 `;
 

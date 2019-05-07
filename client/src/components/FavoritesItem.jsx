@@ -1,5 +1,5 @@
 import React from 'react';
-import { DogButton, FavoritesItems } from '../styles';
+import { FavoritesItems } from '../styles';
 
 const FavoritesItem = ({ name, breed, url}) => {
   return (

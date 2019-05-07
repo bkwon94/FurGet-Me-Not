@@ -1,38 +1,35 @@
 import React from 'react';
 import { TOKEN } from '../../../config.js';
-import DogsDisplay from './DogsDisplay.jsx';
-import { DogDisplayContainer, Form } from '../styles.js';
+import { Form, CatDisplayContainer } from '../styles.js';
+import CatsDisplay from './CatsDisplay.jsx';
 
-class DogsForm extends React.Component {
+class CatsForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      type: 'dog',
+      type: 'cat',
       breed: '',
       size: '',
       gender: '',
       location: '',
-      dogsData: null,
-      doneLoading: false,
-      backClicked: false
+      catsData: null,
+      doneLoading: false
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
-    this.findDogs = this.findDogs.bind(this);
+    this.findCats = this.findCats.bind(this);
     this.updateFavorites = this.updateFavorites.bind(this);
-    this.renderForm = this.renderForm.bind(this);
   }
 
   // handle form submission, prevents page refresh default behavior
   handleFormSubmit(e) {
     e.preventDefault();
-    this.state.backClicked ? this.setState({ backClicked: !this.state.backClicked }) : null;
-    this.findDogs();
+    this.findCats();
   }
 
-  // api call to fetch dogs based on user input
-  findDogs () {
+  // api call to fetch Cats based on user input
+  findCats () {
     console.log('Fetching dog data');
     fetch(`https://api.petfinder.com/v2/animals?type=${this.state.type}&breed=${this.state.breed}&size=${this.state.size}&gender=${this.state.gender}&location=${this.state.location}`, {
       method: 'GET',
@@ -47,12 +44,12 @@ class DogsForm extends React.Component {
         console.log('Setting state');
         this.setState({
           doneLoading: !this.state.doneLoading,
-          dogsData: data
+          catsData: data
         })
       },
       error => {
         this.setState({
-          dogsData: error
+          catsData: error
         });
       }
     )
@@ -90,19 +87,14 @@ class DogsForm extends React.Component {
       .catch((err) => {
         throw err;
       })
-  }
 
-  renderForm() {
-    this.setState({
-      backClicked: !this.state.backClicked
-    })
   }
 
   render() {
-    if (!this.state.doneLoading || this.state.backClicked) {
+    if (!this.state.doneLoading) {
       return (
         <div>
-          <img src="./images/dogpeek.png"
+          <img src="./images/cat-lay.png"
             data-aos="fade-up"
             data-aos-delay="1900"
             data-aos-duration="300"
@@ -117,26 +109,27 @@ class DogsForm extends React.Component {
               <input name="size" type="text" placeholder="Size" onChange={this.handleInputChange}/>
               <input name="gender" type="text" placeholder="Gender" onChange={this.handleInputChange}/>
               <input name="location" type="text" placeholder="Location" onChange={this.handleInputChange}/>
-            <button>Find Doggos!</button>
+            <button>Find Cats!</button>
             </form>
           </Form>
         </div>
 
       )
-    } else if (this.state.doneLoading && this.state.dogsData && !this.state.backClicked) {
+    } else if (this.state.doneLoading && this.state.catsData) {
       return (
-        <DogDisplayContainer>
-          <h2><span onClick={this.renderForm}><i className="fas fa-arrow-left"></i></span>{this.state.breed}'s near you</h2>
+        <CatDisplayContainer>
+          <h2>{this.state.breed}'s near you</h2>
             {
-              this.state.dogsData.animals.map((dog, index) => {
-                return <DogsDisplay key={index} dog={dog} updateFavorites={this.updateFavorites}/>
+              this.state.catsData.animals.map((cat, index) => {
+                return <CatsDisplay key={index} cat={cat} updateFavorites={this.updateFavorites}/>
               })
             }
-        </DogDisplayContainer>
+
+        </CatDisplayContainer>
       )
     }
 
   }
 }
 
-export default DogsForm;
+export default CatsForm;

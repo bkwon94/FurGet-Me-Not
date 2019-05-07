@@ -45,7 +45,7 @@ const Home = (props) => {
   return (
     <HeadingSection id="home">
       <MainHeader>Fur Get Me Not</MainHeader>
-      <MainDescription><p>Looking for a new dog? Cat? Or maybe... rabbit?</p> <em>Fur Get Me Not</em> is the premier place to find your next furry friend! <p>Simply lookup what your heart desires..</p> <p>And a list of local adoptions will be available!</p>
+      <MainDescription><p>Looking for a new dog? Cat? Or maybe... a rabbit?</p> <em>Fur Get Me Not</em> is the #1 place to find your next furry friend! <p>Simply lookup what your heart desires..</p> <p>And a list of local pets up for adoption will be available!</p>
 
 
       <MainButton onClick={() => openModal(true)}>Get Started!  <i className="fas fa-paw"></i></MainButton>

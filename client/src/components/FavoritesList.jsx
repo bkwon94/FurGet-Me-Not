@@ -31,6 +31,7 @@ const FavoritesList = ({ dogFavs }) => {
           return <FavoritesItem key={index} url={url}/>
         })}
       </span>
+
     </FavoritesPage>
   )
 }
