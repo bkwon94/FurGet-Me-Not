@@ -4,7 +4,7 @@ import DogsForm from './DogsForm.jsx';
 
 
 
-const Dogs = () => {
+const Dogs = ({ currentUser }) => {
   return (
     <DogsSection id="dogs">
 
@@ -19,7 +19,7 @@ const Dogs = () => {
         </DogImageContainer>
 
         <DogFormContainer>
-          <DogsForm></DogsForm>
+          <DogsForm currentUser={currentUser}></DogsForm>
         </DogFormContainer>
 
     </DogsSection>

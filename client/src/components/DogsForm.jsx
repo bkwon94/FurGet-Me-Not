@@ -1,7 +1,6 @@
 import React from 'react';
 import { TOKEN } from '../../../config.js';
 import DogsDisplay from './DogsDisplay.jsx';
-import Dogs from './Dogs.jsx';
 import { DogDisplayContainer, Form } from '../styles.js';
 
 class DogsForm extends React.Component {
@@ -20,6 +19,7 @@ class DogsForm extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.findDogs = this.findDogs.bind(this);
+    this.updateFavorites = this.updateFavorites.bind(this);
   }
 
   // handle form submission, prevents page refresh default behavior
@@ -66,6 +66,25 @@ class DogsForm extends React.Component {
     });
   }
 
+  // update favorites of current user
+  updateFavorites() {
+    fetch('/users', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username: this.props.currentUser
+      })
+    })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        throw err;
+      })
+  }
+
   render() {
     if (!this.state.doneLoading) {
       return (
@@ -97,7 +116,7 @@ class DogsForm extends React.Component {
           <h2>{this.state.breed}'s near you</h2>
             {
               this.state.dogsData.animals.map((dog, index) => {
-                return <DogsDisplay key={index} dog={dog}/>
+                return <DogsDisplay key={index} dog={dog} updateFavorites={this.updateFavorites}/>
               })
             }
 

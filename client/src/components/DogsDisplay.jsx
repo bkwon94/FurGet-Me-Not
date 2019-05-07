@@ -4,17 +4,22 @@ import {  DogImage, DogName, DogInfoContainer, DogDescription, DogButton, DogNam
 const DogsDisplay = ({
   dog: {
     photos, name, description, url
-  }
+  },
+  updateFavorites
 }) => {
+  // ENSURE DESCRIPTION + PHOTOS EXIST IN DATA
   if (!description || description.length < 30) { return null; }
   if (!photos.length) { return null; }
+
+
+
   return (
     <DogInfoContainer>
       <DogNameAndInfo>
         <DogName>{name}</DogName>
         <DogDescription>{description}
         <div>
-          <FavoriteButton><i className="fas fa-heart"></i></FavoriteButton>
+          <FavoriteButton onClick={updateFavorites}><i className="far fa-heart"></i></FavoriteButton>
         </div>
         </DogDescription>
         <DogButton href={url}>Adopt Me! <i className="fas fa-home"></i></DogButton>

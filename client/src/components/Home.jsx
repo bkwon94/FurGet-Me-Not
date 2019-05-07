@@ -4,7 +4,8 @@ import { HeadingSection, MainHeader, MainDescription, MainButton, Form } from '.
 import { useInput } from '../hooks/input-hook.jsx';
 import Popup from 'reactjs-popup';
 
-const Home = () => {
+
+const Home = (props) => {
 
   const [open, openModal] = useState(false);
   const { value: username, bind: bindUsername, reset: resetUsername } = useInput('');
@@ -15,8 +16,8 @@ const Home = () => {
   // need to handle form input change
   const handleSubmit = event => {
     event.preventDefault();
+    props.getCurrent(username);
     console.log(`Submitting ${username}, ${password}, ${firstName}, ${lastName}`);
-
     fetch('/users', {
       method: 'POST',
       headers: {'Content-Type':'application/json'},
@@ -44,7 +45,6 @@ const Home = () => {
   return (
     <HeadingSection id="home">
       <MainHeader>Fur Get Me Not</MainHeader>
-
       <MainDescription><p>Looking for a new dog? Cat? Or maybe... rabbit?</p> <em>Fur Get Me Not</em> is the premier place to find your next furry friend! <p>Simply lookup what your heart desires..</p> <p>And a list of local adoptions will be available!</p>
 
 
@@ -66,7 +66,6 @@ const Home = () => {
           </form>
         </Form>
       </Popup>
-
       </MainDescription>
 
     </HeadingSection>

@@ -10,16 +10,25 @@ import AppNavbar from './AppNavbar.jsx';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      currentUser: ''
+    };
+    this.getCurrentUser = this.getCurrentUser.bind(this);
   }
-  
+
+  getCurrentUser(user) {
+    this.setState({
+      currentUser: user
+    })
+  }
+
   render() {
     return (
       <div>
         <AppNavbar></AppNavbar>
-        <Home></Home>
-        <Dogs></Dogs>
-        <Cats></Cats>
+        <Home getCurrent={this.getCurrentUser}></Home>
+        <Dogs currentUser={this.state.currentUser}></Dogs>
+        <Cats currentUser={this.state.currentUser}></Cats>
         <Other></Other>
       </div>
 

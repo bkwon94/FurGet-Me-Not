@@ -247,6 +247,7 @@ export const DogInfoContainer = styled.div`
   justify-content: space-between;
   // align-content: space-between;
   margin-bottom: 30px;
+  margin-left: 10px;
 `;
 
 export const DogNameAndInfo = styled.div`
@@ -256,7 +257,7 @@ export const DogNameAndInfo = styled.div`
 `;
 
 export const DogImage = styled.img`
-  width: 200px;
+  width: 190px;
   height: 275px;
   background: transparent;
   padding: 4px;
@@ -290,8 +291,12 @@ export const DogButton = styled.a`
 
 export const FavoriteButton = styled.button`
   border: none;
-  color: red;
+  color: rgb(21, 97, 173);
   font-size: 16px;
+  cursor: pointer;
+  :hover {
+    color: red;
+  }
 `;
 
 
