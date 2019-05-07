@@ -67,14 +67,17 @@ class DogsForm extends React.Component {
   }
 
   // update favorites of current user
-  updateFavorites() {
+  updateFavorites(name, url) {
     fetch('/users', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        username: this.props.currentUser
+        username: this.props.currentUser,
+        breed: this.state.breed,
+        name: name,
+        url: url
       })
     })
       .then((res) => {

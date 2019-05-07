@@ -23,7 +23,9 @@ app.post('/users', async (req, res) => {
 // ADD TO FAVORITES OF USER IN DATABASE
 app.put('/users', async (req, res) => {
   console.log(req.body);
-  res.send('Done');
+  const { username, breed, name, url } = req.body;
+  let postedFavorite = db.updateUser(username, breed, name, url);
+  await res.send(postedFavorite);
 });
 
 module.exports = app;

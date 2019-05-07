@@ -19,7 +19,7 @@ const DogsDisplay = ({
         <DogName>{name}</DogName>
         <DogDescription>{description}
         <div>
-          <FavoriteButton onClick={updateFavorites}><i className="far fa-heart"></i></FavoriteButton>
+          <FavoriteButton onClick={() => updateFavorites(name, url)}><i className="far fa-heart"></i></FavoriteButton>
         </div>
         </DogDescription>
         <DogButton href={url}>Adopt Me! <i className="fas fa-home"></i></DogButton>

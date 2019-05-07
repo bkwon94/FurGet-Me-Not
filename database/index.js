@@ -35,12 +35,13 @@ const insertUser = async (newUser) => {
 };
 
 // UPDATE FAVORITES OF USER
-const updateUser = async (username) => {
-  const updateQuery = { 'favorites.dogs.info.name': 'fluff', 'favorites.dogs.info.breed': 'hound', 'favorites.dogs.info.url': 'url' }
+const updateUser = async (username, breed, name, url) => {
+  const updateQuery = { 'favorites.dogs.info.name': name, 'favorites.dogs.info.breed': breed, 'favorites.dogs.info.url': url }
   await User.updateOne({ username: username }, updateQuery , (err, doc) => {
     if (err) { throw err; }
     console.log(doc);
   });
+  return 'Successfully updated favorites!'
 };
 
 module.exports = {
