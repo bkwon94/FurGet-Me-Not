@@ -299,5 +299,40 @@ export const FavoriteButton = styled.button`
   }
 `;
 
+// FAVORITES
+export const FavoritesPage = styled.div`
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  align-content: center;
+  width: 700px;
+  h2 {
+    background: rgb(21, 97, 173);
+    text-transform: uppercase;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 white, 0 -0.5px black;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+  }
+  h4 {
+    color: rgb(21, 97, 173);
+  }
+`;
+
+export const FavoritesItems = styled.div`
+  color: #797979;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #fc5226;
+    font-weight: bold;
+    border-bottom: 4px solid transparent;
+    :hover {
+      border-bottom: 4px solid #fc5226;
+    }
+  }
+`;
 
 // export { HeadingSection, BasketballSection, SoccerSection, Navbar};

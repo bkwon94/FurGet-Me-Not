@@ -2,23 +2,26 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
-  username: String,
+  username: {
+    type: String,
+    unique: true
+  },
   password: String,
   firstName: String,
   lastName: String,
   favorites: {
     dogs: {
       info: {
-        name: String,
-        breed: String,
-        url: String
+        name: [],
+        breed: [],
+        url: []
       }
     },
     cats: {
       info: {
-        name: String,
-        breed: String,
-        url: String
+        name: [],
+        breed: [],
+        url: []
       }
     }
   }

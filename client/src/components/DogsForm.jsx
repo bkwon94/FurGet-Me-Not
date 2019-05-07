@@ -82,10 +82,12 @@ class DogsForm extends React.Component {
     })
       .then((res) => {
         console.log(res);
+        this.props.getFavs();
       })
       .catch((err) => {
         throw err;
       })
+
   }
 
   render() {

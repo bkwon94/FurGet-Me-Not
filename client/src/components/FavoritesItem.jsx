@@ -1,10 +1,13 @@
 import React from 'react';
+import { DogButton, FavoritesItems } from '../styles';
 
-const FavoritesItem = () => {
+const FavoritesItem = ({ name, breed, url}) => {
   return (
-    <div>
-hey
-    </div>
+    <FavoritesItems>
+      <span>{name}</span>
+      <span>{breed}</span>
+      {url ? <span><a href={url}>Adopt!</a></span>: null}
+    </FavoritesItems>
   )
 }
 

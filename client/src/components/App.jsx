@@ -11,9 +11,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentUser: ''
+      currentUser: 'guest',
+      dogFavorites: [],
+      catFavorites: []
     };
     this.getCurrentUser = this.getCurrentUser.bind(this);
+    this.getUserFavorites = this.getUserFavorites.bind(this);
   }
 
   getCurrentUser(user) {
@@ -22,12 +25,29 @@ class App extends React.Component {
     })
   }
 
+  getUserFavorites() {
+    console.log('getting favs');
+    fetch(`/users/${this.state.currentUser}`, {
+      method: 'GET'
+    })
+      .then(res => res.json())
+      .then(result => {
+        console.log(result);
+        this.setState({
+          dogFavorites: result.favorites.dogs.info,
+          catFavorites: result.favorites.cats.info
+        })
+      })
+  }
+  componentDidMount() {
+    this.getUserFavorites();
+  }
   render() {
     return (
       <div>
-        <AppNavbar></AppNavbar>
+        <AppNavbar dogFavs={this.state.dogFavorites}></AppNavbar>
         <Home getCurrent={this.getCurrentUser}></Home>
-        <Dogs currentUser={this.state.currentUser}></Dogs>
+        <Dogs currentUser={this.state.currentUser} getFavs={this.getUserFavorites}></Dogs>
         <Cats currentUser={this.state.currentUser}></Cats>
         <Other></Other>
       </div>

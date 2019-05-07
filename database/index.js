@@ -2,26 +2,24 @@ const mongoose = require('mongoose');
 const dbURI ='mongodb://localhost:27017/bspn';
 const User = require('./schema');
 
-mongoose.connect(dbURI, { useNewUrlParser: true });
+mongoose.connect(dbURI, { useNewUrlParser: true, useCreateIndex: true });
 const db = mongoose.connection;
 
 db.on('connected', () => {
   console.log('Connected to bspn');
 });
 
-// const user = new User({
-//   username: 'noel',
-//   password: 'password',
-//   firstName: 'Brian',
-//   lastName: 'Kwon',
-//   favorites: {
-//     dogs: {
-//       info: {
-//         name: 'YO'
-//       }
-//     }
-//   }
-// });
+// GET USER FAVS
+const getUserFavorites = async(user) => {
+  let userFavorites;
+  await User.find({ username: user }, (err, docs) => {
+    if (err) throw err;
+    userFavorites = docs[0];
+    console.log(userFavorites.favorites);
+  })
+  return userFavorites;
+};
+// getUserFavorites('2')
 
 
 // INSERT NEW USER
@@ -36,15 +34,18 @@ const insertUser = async (newUser) => {
 
 // UPDATE FAVORITES OF USER
 const updateUser = async (username, breed, name, url) => {
-  const updateQuery = { 'favorites.dogs.info.name': name, 'favorites.dogs.info.breed': breed, 'favorites.dogs.info.url': url }
-  await User.updateOne({ username: username }, updateQuery , (err, doc) => {
-    if (err) { throw err; }
-    console.log(doc);
-  });
+  const updateQuery = [{ $push: {'favorites.dogs.info.breed': breed} }, { $push: {'favorites.dogs.info.name': name} }, { $push: {'favorites.dogs.info.url': url} }];
+  await updateQuery.forEach(query => {
+    User.updateOne({ username: username }, query, (err, doc) => {
+      if (err) { throw err; }
+      console.log(doc);
+    });
+  })
   return 'Successfully updated favorites!'
 };
 
 module.exports = {
   insertUser: insertUser,
-  updateUser: updateUser
+  updateUser: updateUser,
+  getUserFavorites: getUserFavorites
 };

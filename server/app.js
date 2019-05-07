@@ -12,6 +12,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/../public')));
 
+// GET ALL FAVORITES OF USER
+app.get('/users/:user', async(req, res) => {
+  const { user } = req.params;
+  console.log(user);
+  if (user !== 'guest') {
+    // if user registered, fetch favorites
+    let favorites = await db.getUserFavorites(user);
+    await res.send(favorites);
+  }
+})
+
 // CREATE A NEW USER IN DATABASE
 app.post('/users', async (req, res) => {
   let userData = req.body;
@@ -24,7 +35,8 @@ app.post('/users', async (req, res) => {
 app.put('/users', async (req, res) => {
   console.log(req.body);
   const { username, breed, name, url } = req.body;
-  let postedFavorite = db.updateUser(username, breed, name, url);
+  console.log(name);
+  let postedFavorite = await db.updateUser(username, breed, name, url);
   await res.send(postedFavorite);
 });
 
