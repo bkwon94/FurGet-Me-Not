@@ -27,7 +27,6 @@ class CatsForm extends React.Component {
     e.preventDefault();
     this.findCats();
   }
-
   // api call to fetch Cats based on user input
   findCats () {
     console.log('Fetching dog data');

@@ -1,7 +1,6 @@
 import React from 'react';
-import { DogsSection, DogHeader, DogFormContainer, DogImageContainer, DogThinkingBubble } from '../styles.js'
+import { DogsSection, DogFormContainer, DogImageContainer, DogThinkingBubble } from '../styles.js'
 import DogsForm from './DogsForm.jsx';
-
 
 
 const Dogs = ({ currentUser, getFavs }) => {

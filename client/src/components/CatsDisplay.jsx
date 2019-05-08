@@ -15,11 +15,13 @@ const CatsDisplay = ({
     <CatInfoContainer>
       <CatNameAndInfo>
         <CatName>{name}</CatName>
+
         <CatDescription>{description}
-        <div>
-          <FavoriteButton onClick={() => updateFavorites(name, url)}><i className="far fa-heart"></i></FavoriteButton>
-        </div>
+          <div>
+            <FavoriteButton onClick={() => updateFavorites(name, url)}><i className="far fa-heart"></i></FavoriteButton>
+          </div>
         </CatDescription>
+        
         <CatButton href={url}>Adopt Me! <i className="fas fa-home"></i></CatButton>
 
       </CatNameAndInfo>

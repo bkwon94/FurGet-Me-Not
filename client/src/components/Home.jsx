@@ -8,6 +8,7 @@ import Popup from 'reactjs-popup';
 const Home = (props) => {
 
   const [open, openModal] = useState(false);
+  // HANDLE FORM CHANGE AND SUBMIT WITH REACT HOOKS
   const { value: username, bind: bindUsername, reset: resetUsername } = useInput('');
   const { value: password, bind: bindPassword, reset: resetPassword } = useInput('');
   const { value: firstName, bind: bindFirstName, reset: resetFirstName } = useInput('');
@@ -17,7 +18,7 @@ const Home = (props) => {
   const handleSubmit = event => {
     event.preventDefault();
     props.getCurrent(username);
-    console.log(`Submitting ${username}, ${password}, ${firstName}, ${lastName}`);
+
     fetch('/users', {
       method: 'POST',
       headers: {'Content-Type':'application/json'},
@@ -46,7 +47,6 @@ const Home = (props) => {
     <HeadingSection id="home">
       <MainHeader>FurGet Me Not</MainHeader>
       <MainDescription><p>Looking for a new dog? Cat? Or maybe... a rabbit?</p> <em>Fur Get Me Not</em> is the #1 place to find your next furry friend! <p>Simply lookup what your heart desires..</p> <p>And a list of local pets up for adoption will be available!</p>
-
 
       <MainButton onClick={() => openModal(true)}>Get Started!  <i className="fas fa-paw"></i></MainButton>
 

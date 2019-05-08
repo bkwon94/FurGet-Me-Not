@@ -38,9 +38,11 @@ class App extends React.Component {
         })
       })
   }
+
   componentDidMount() {
     this.getUserFavorites();
   }
+  
   render() {
     return (
       <div>

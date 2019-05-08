@@ -5,8 +5,7 @@ const DogsDisplay = ({
   dog: {
     photos, name, description, url
   },
-  updateFavorites,
-  renderForm
+  updateFavorites
 }) => {
   // ENSURE DESCRIPTION + PHOTOS EXIST IN DATA
   if (!description || description.length < 30) { return null; }
